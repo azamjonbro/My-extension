@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 50% 50%, #0f0f0f, #090909);
+  color: #f1f1f1;
+  font-family: "Fira Code", monospace;
+  display: flex;
+  gap: 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 20px;
+  padding: 30px 35px;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(0, 255, 163, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  min-width: 500px;
+}
+
+.container:hover {
+  transform: scale(1.00);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(0, 255, 163, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+h1 {
+  color: #00ffa3;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 10px rgba(0, 255, 163, 0.7);
+}
+
+#tasks p {
+  background: rgba(255, 255, 255, 0.06);
+  margin: 14px 0;
+  padding: 14px;
+  border-radius: 14px;
+  border-left: 4px solid #00ffa3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.05rem;
+  color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+#tasks p:hover {
+  background: rgba(0, 255, 163, 0.1);
+  transform: translateX(5px);
+}
+
+#tasks p::before {
+  content: "⚡";
+  font-size: 1.3rem;
+  color: #00ffa3;
+}
+
+button {
+  background: linear-gradient(145deg, #00ffa3, #00c67f);
+  color: #121212;
+  border: none;
+  min-width: 300px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  margin: 10px 6px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  box-shadow:
+    0 6px 20px rgba(0, 255, 163, 0.4),
+    inset 0 0 8px rgba(255, 255, 255, 0.1);
+  transition: all 0.35s ease;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #00c67f, #00ffa3);
+  box-shadow:
+    0 10px 25px rgba(0, 255, 163, 0.6),
+    inset 0 0 15px rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px) scale(1.02);
+}
+
+.secound {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #aaaaaa;
+}
+
+#tasks p.done::before {
+  content: "✔️";
+  color: #00ff88;
+}
+
+#tasks p.missed::before {
+  content: "❌";
+  color: #ff4d4d;
+}
+
+#tasks p.pending::before {
+  content: "⏳";
+  color: #ffaa00;
+}
+
+iframe{
+  display: none;
+}

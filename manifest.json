@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Azamjonbro Roadmap",
+  "version": "1.0",
+  "description": "10 oylik roadmap + progress tracker + notification",
+  "permissions": ["storage", "notifications", "alarms"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "chrome_url_overrides": {
+    "newtab": "popup.html"
+  },
+  "icons": {
+    "16": "icons/icon16.jpg",
+    "48": "icons/icon48.jpg",
+    "128": "icons/icon32.jpg"
+  }
+}
